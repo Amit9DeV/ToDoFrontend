@@ -14,7 +14,7 @@ const [Fetchdata,setdata]=useState([])
 
 async function fetchData (){
   try {
-    let Fetch = await axios.get("http://localhost:3000/")
+    let Fetch = await axios.get("https://todobackend-be0f.onrender.com")
     setdata(Fetch.data)
     console.log(Fetch.data)
   } catch (error) {
@@ -34,7 +34,7 @@ const onSubmit = async(data) =>{
   }
     try {
                
-      await axios.post("http://localhost:3000/",NewData).then(()=>console.log("Done")).catch(()=>console.log("Error in Post"))
+      await axios.post("https://todobackend-be0f.onrender.com/",NewData).then(()=>console.log("Done")).catch(()=>console.log("Error in Post"))
     } catch (error) {
       console.log(error)
     }
